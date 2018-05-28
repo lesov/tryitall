@@ -1,5 +1,7 @@
 [
 null,
-{"id":1,"expanded":true,"name":"worldmap","order":1,"parentId":0,"scrollX":832,"scrollY":640},
-{"id":2,"expanded":false,"name":"Xela village","order":2,"parentId":1,"scrollX":832,"scrollY":640}
+{"id":1,"expanded":true,"name":"worldmap","order":1,"parentId":0,"scrollX":1092,"scrollY":694.6666666666666},
+{"id":2,"expanded":true,"name":"Xela village entry s","order":2,"parentId":1,"scrollX":832,"scrollY":640},
+{"id":3,"expanded":false,"name":"Inn Main","order":3,"parentId":2,"scrollX":1092,"scrollY":694.6666666666666},
+{"id":4,"expanded":false,"name":"Inn basement","order":4,"parentId":2,"scrollX":1092,"scrollY":694.6666666666666}
 ]
