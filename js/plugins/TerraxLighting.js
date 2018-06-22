@@ -46,12 +46,12 @@
  * @param Save DaynightSeconds
  * @desc Game variable the time of day (0-59) can be stored in
  * Default: 0
- * @default 0 
+ * @default 0
  *
  * @param Flashlight offset
  * @desc Increase this setting to move up the flashlight for double height characters.
  * Default: 0
- * @default 0 
+ * @default 0
  *
  * @param Screensize X
  * @desc Increase if your using a higher screen resolution then the default
@@ -86,22 +86,22 @@
  * 3. For lights on south walls, light will face north.
  * 4. For lights on west walls, light will face east.
  *
- * To alter the player radius in game use the following plugin command : 
+ * To alter the player radius in game use the following plugin command :
  * Light radius 200 #FFFFFF  (to change the radius and the color)
  * If you want to change the player radius slowly over time (like a dying torch)
  * use the command 'Light radiusgrow 200 #FFFFFF'
- * You can alter the brightness of the players lightsource by adding: 
+ * You can alter the brightness of the players lightsource by adding:
  * 'Light radius 200 #FFFFFF B70' (Brightness values between 0 and 99, 0 is default)
  *
  * To turn on and off lightsources in the game, do the following:
- * Give the lightsource the normal def :  Light 250 #FFFFFF and an extra number 
+ * Give the lightsource the normal def :  Light 250 #FFFFFF and an extra number
  * so it becomes 'Light 250 #FFFFFF 1'
  * (If your using the optional brightness and direction place it after those (Light 250 #FFFFFF B50 D2 1)
  * To turn on this light use plugin command : 'Light on 1'.
  * The plugin command will also trigger SelfSwitch 'D' on the targeted light(s).
  * To turn off the light use plugin command : 'Light off 1'.
  * You can reset the switches each map with the option or manualy by
- * the plugin command 'Light switch reset' 
+ * the plugin command 'Light switch reset'
  * You can also turn off lights with the kill-selfswitch defined in the parameters.
  * You can change the color of the lightsources that have a id. Use plugin call
  * 'Light color 1 #FF0000'
@@ -113,8 +113,8 @@
  *
  * Replacing the 'Light' keyworld with 'Fire' will give the lights a subtle flicker
  * You can configure the fire effect with the plugin command 'SetFire 7 10'
- * Where 7 is the radius change and 10 is the shift in color from red to yellow. 
- * 
+ * Where 7 is the radius change and 10 is the shift in color from red to yellow.
+ *
  * To completly turn off the script use : 'Light deactivate'
  * To turn it on again use the command: 'Light activate'
  *
@@ -125,7 +125,7 @@
  * Plugin command 'Daynight hour 16 30' sets the hour to 16:30 hours
  * Each hour has its own color value.
  * Plugin command 'Daynight color 0 #222222' changes 0:00 hours to color value '#222222'
- * You can add time with the plugin command 'Daynight add 8 30' (this adds 8 hours and 30 minutes) 
+ * You can add time with the plugin command 'Daynight add 8 30' (this adds 8 hours and 30 minutes)
  *
  * If you want to use the time of day to trigger effects (like turning on lights when it gets dark)
  * you can use the parameters 'Save DaynightHours','Save DaynightMinutes','Save DaynightSeconds'
@@ -136,7 +136,7 @@
  * If you want to go 'alien world' and stuff, you can change the number of hours in a day with
  * script command 'daynight hoursinday 48' (for 48 hours in day, don't forget to fill in the hour values)
  *
- * As an alternative to the daynight cycle you can use the tint system. If you want to use another plugin for the 
+ * As an alternative to the daynight cycle you can use the tint system. If you want to use another plugin for the
  * day/night cycle, the tint option is probably best to use.
  * The plugin command 'Tint set #333333' will make the room less dark.
  * The plugin command 'Tint fade #777777 5' will fade the color from the current color to the new, the last
@@ -155,19 +155,19 @@
  * TileLight 1 ON #FFFFFF 150  Will create a lightsource (color #FFFFFF radius 150) on all tiles with tile-tag 1.
  * TileRegion 1 ON #FFFFFF 150 Will create a lightsource on all tiles with region-number 1.
  * You can increase the brightness of a lightsource with the optional TileRegion 1 ON #FFFFFF 150 B50  (for 50% increased brightness)
- * TileLight 1 OFF will turn off the lights on tile-tag 1 again 
- * TileRegion 1 OFF will turn off the lights on region-number 1 again  
+ * TileLight 1 OFF will turn off the lights on tile-tag 1 again
+ * TileRegion 1 OFF will turn off the lights on region-number 1 again
  * TileFire and RegionFire works the same as TileLight, but with fire effect.
  * TileGlow and RegionGlow works the same as TileLight, but with a slight pulsing effect.
  * Make sure your map still has at least one event with lights in it, otherwise the script will not run.
  *
  * TileBlock and RegionBlock settings
  * To block lights on certain tiles (roofs for instance) you can use the following plugin command.
- * TileBlock 1 ON #000000  Will block light on tiles with tile-tag 1. 
+ * TileBlock 1 ON #000000  Will block light on tiles with tile-tag 1.
  * RegionBlock 1 ON #000000 Will block lights on tiles with region-number 1.
  * TileBlock 1 OFF and TileRegion 1 OFF turns off the blocking again.
  * To darken but not completly block light use a slightly higher color setting (#333333) for instance.
- * This function does not raytrace. If the players lightradius is bigger then the blocking tiles the 
+ * This function does not raytrace. If the players lightradius is bigger then the blocking tiles the
  * light will show on the other side. For the best effect keep the lightradius a bit smaller then the block section.
  * for advance users, if you want to block more or less of the tile you can do the following
  * RegionBlock 1 ON #000000 shape xoffset yoffset width height
@@ -183,10 +183,10 @@
  * Terrax lighting system is compatible with the Moghunter time system, for specifics see the read-me.
  *
  * Released under the MIT license,
- * if used for commercial projects feel free to make a donation or 
+ * if used for commercial projects feel free to make a donation or
  * better yet, give me a free version of what you have created.
  * e-mail : fox(AT)caiw.nl / terraxz2 on steam.
- * 
+ *
  * Thanks to everyone in the rpgmakerweb community for idea's, support and interest.
  * Special thanks to Galv for solving some problems.
 */
@@ -197,7 +197,7 @@ var Imported = Imported || {};
 Imported.TerraxLighting = true;
 
 	// These are global variables so they can be used by other plugins
- 
+
 	var Terrax_tint_speed = 60;
 	var Terrax_tint_target = '#000000';
 
@@ -649,6 +649,7 @@ Imported.TerraxLighting = true;
 							if (key == 'b' || key == 'B') {
 								var brightness = Number(b_arg.substring(1)) / 100;
 								$gameVariables.SetPlayerBrightness(brightness);
+								if (brightness==.01){$gameVariables.SetPlayerBrightness(brightness/100)};
 							}
 						}
 					}
@@ -701,6 +702,7 @@ Imported.TerraxLighting = true;
 							if (key == 'b' || key == 'B') {
 								brightness = Number(b_arg.substring(1)) / 100;
 								$gameVariables.SetPlayerBrightness(brightness);
+								if (brightness==.01){$gameVariables.SetPlayerBrightness(brightness/100)};
 							}
 						}
 					}
@@ -946,7 +948,7 @@ Imported.TerraxLighting = true;
 		this._lightmask = new Lightmask();
 		this.addChild(this._lightmask);
 	};
-	
+
 	function Lightmask() {
 	    this.initialize.apply(this, arguments);
 	}
@@ -961,7 +963,7 @@ Imported.TerraxLighting = true;
 	Lightmask.prototype = Object.create(eval(pixitest));
 
 	Lightmask.prototype.constructor = Lightmask;
-	
+
 	Lightmask.prototype.initialize = function() {
 
 
@@ -980,15 +982,15 @@ Imported.TerraxLighting = true;
 	    this._sprites = [];
 	    this._createBitmap();
 	};
-	
+
 	//Updates the Lightmask for each frame.
-	
+
 	Lightmask.prototype.update = function() {
 		  	this._updateMask();
 	};
-	
+
 	//@method _createBitmaps
-	
+
 	Lightmask.prototype._createBitmap = function() {
 	    this._maskBitmap = new Bitmap(maxX+20,maxY);   // one big bitmap to fill the intire screen with black
 	    var canvas = this._maskBitmap.canvas;             // a bit larger then setting to take care of screenshakes
@@ -2599,7 +2601,7 @@ Imported.TerraxLighting = true;
 	 * @private
 	 */
 	Lightmask.prototype._addSprite = function(x1,y1,selectedbitmap) {
-		
+
 	    var sprite = new Sprite(this.viewport);
 	    sprite.bitmap = selectedbitmap;
 	    sprite.opacity = 255;
@@ -2613,7 +2615,7 @@ Imported.TerraxLighting = true;
 	    sprite.ay = 0;
 	 	sprite.opacity = 255;
 	};
-	
+
 	/**
 	 * @method _removeSprite
 	 * @private
@@ -2621,10 +2623,10 @@ Imported.TerraxLighting = true;
 	Lightmask.prototype._removeSprite = function() {
 	    this.removeChild(this._sprites.pop());
 	};
-	
+
 
 	// *******************  NORMAL BOX SHAPE ***********************************
-	
+
 	Bitmap.prototype.FillRect = function(x1, y1, x2, y2, color1) {
 		x1=x1+20;
 		//x2=x2+20;
@@ -2635,7 +2637,7 @@ Imported.TerraxLighting = true;
 	    context.restore();
 	    this._setDirty();
 	};
-	
+
 	// *******************  CIRCLE/OVAL SHAPE ***********************************
 	// from http://scienceprimer.com/draw-oval-html5-canvas
 	Bitmap.prototype.FillCircle = function(centerX, centerY, xradius, yradius, color1) {
@@ -2666,7 +2668,7 @@ Imported.TerraxLighting = true;
 
 	// *******************  NORMAL LIGHT SHAPE ***********************************
 	// Fill gradient circle
-	
+
 	Bitmap.prototype.radialgradientFillRect = function(x1, y1, r1, r2, color1, color2, flicker, brightness, direction) {
 
 		var isValidColor = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color1);
@@ -2771,10 +2773,10 @@ Imported.TerraxLighting = true;
 			this._setDirty();
 		}
 	};
-	
+
 	// ********************************** FLASHLIGHT *************************************
 	// Fill gradient Cone
-	
+
 	Bitmap.prototype.radialgradientFillRect2 = function(x1, y1, r1, r2, color1, color2, direction, flashlength, flashwidth) {
 		x1=x1+20;
 
@@ -2788,28 +2790,28 @@ Imported.TerraxLighting = true;
 		}
 
 	    var context = this._context;
-	    var grad;	
-	    
+	    var grad;
+
 	    // smal dim glove around player
 	   	context.save();
 	    y1 = y1 - flashlightoffset;
-	     
+
 	    r1 = 1;
 	  	r2 = 40;
 		grad = context.createRadialGradient(x1, y1, r1, x1, y1, r2);
 		grad.addColorStop(0, '#999999');
 		grad.addColorStop(1, color2);
-	
+
 		context.fillStyle = grad;
 		context.fillRect(x1-r2, y1-r2, r2*2, r2*2);
-	    
+
 	    // flashlight
-	    
+
 		for (var cone = 0; cone < flashlength; cone++) {
 			var flashlightdensity =  $gameVariables.GetFlashlightDensity();
 		   	r1 = cone * flashlightdensity;
 	  		r2 = cone * flashwidth;
-	  		
+
 	  		switch(direction) {
 	    		case 6:
 	    			x1 = x1 + cone*6;
@@ -2823,24 +2825,24 @@ Imported.TerraxLighting = true;
 	            case 8:
 	            	y1 = y1 - cone*6;
 	       	    	break;
-			} 
-	  		  		
+			}
+
 
 		  	grad = context.createRadialGradient(x1, y1, r1, x1, y1, r2);
 		    grad.addColorStop(0, color1);
 		    grad.addColorStop(1, color2);
-	
+
 		    context.fillStyle = grad;
 		    context.fillRect(x1-r2, y1-r2, r2*2, r2*2);
     	}
 	    context.fillStyle = grad;
 		context.fillRect(x1-r2, y1-r2, r2*2, r2*2);
-		
-	    context.restore();	    
+
+	    context.restore();
 	    this._setDirty();
 	};
-	
-	
+
+
 	function hexToRgb(hex) {
     	var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     	return result ? {
@@ -3130,7 +3132,7 @@ Imported.TerraxLighting = true;
 	    this.createDestination();
 	    this.createLightmask();
 	    this.createWeather();
-	
+
 	};
 
 	// ALLIASED Move event location => reload map.
@@ -3193,5 +3195,4 @@ Imported.TerraxLighting = true;
 
 })();
 
-	
-	
+
